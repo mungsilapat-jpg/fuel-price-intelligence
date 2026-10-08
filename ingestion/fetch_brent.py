@@ -9,6 +9,8 @@ load_dotenv()
 API_KEY = os.getenv("EIA_API_KEY")
 URL = "https://api.eia.gov/v2/petroleum/pri/spt/data/"
 
+PAGE = 5000
+
 params = {
     "api_key": API_KEY,
     "frequency": "daily",
@@ -16,13 +18,21 @@ params = {
     "facets[series][]": "RBRTE",  # Brent spot price
     "sort[0][column]": "period",
     "sort[0][direction]": "desc",
-    "length": 5000,
+    "length": PAGE,
 }
 
-resp = requests.get(URL, params=params, timeout=30)
-resp.raise_for_status()
+rows = []
+offset = 0
+while True:
+    params["offset"] = offset
+    resp = requests.get(URL, params=params, timeout=30)
+    resp.raise_for_status()
+    batch = resp.json()["response"]["data"]
+    rows.extend(batch)
+    if len(batch) < PAGE:
+        break
+    offset += PAGE
 
-rows = resp.json()["response"]["data"]
 df = pd.DataFrame(rows)
 df["period"] = pd.to_datetime(df["period"])
 df["value"] = pd.to_numeric(df["value"])
