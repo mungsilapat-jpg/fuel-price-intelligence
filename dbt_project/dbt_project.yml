@@ -1,0 +1,11 @@
+name: fuel_price
+version: "1.0.0"
+profile: fuel_price
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  fuel_price:
+    silver:
+      +materialized: table
+      +schema: silver
