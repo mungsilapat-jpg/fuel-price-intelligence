@@ -20,6 +20,7 @@ engine = create_engine(url)
 TABLES = {
     "eia_brent_daily": "data/bronze/eia_brent_daily.parquet",
     "fred_usdthb_daily": "data/bronze/fred_usdthb_daily.parquet",
+     "eppo_fuel_prices": "data/bronze/eppo_fuel_prices.parquet",
 }
 
 with engine.begin() as conn:
