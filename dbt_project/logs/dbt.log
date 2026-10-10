@@ -1738,3 +1738,1191 @@ having count(*) > 1
 [0m19:57:41.937323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abadad2bf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abadad29890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7abad77f8250>]}
 [0m19:57:41.938374 [debug] [MainThread]: Flushing usage events
 [0m19:57:43.064104 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:44:49.405566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81ee15750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81f9769d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81ef53a50>]}
+
+
+============================== 20:44:49.413389 | 31ec381a-c23d-45a8-aa10-bcf7cb39ffba ==============================
+[0m20:44:49.413389 [info ] [MainThread]: Running with dbt=1.12.5
+[0m20:44:49.414720 [debug] [MainThread]: running dbt with arguments {'log_path': '/usr/app/dbt_project/logs', 'profiles_dir': '.', 'target_path': 'None', 'fail_fast': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'empty': 'False', 'debug': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'printer_width': '80', 'invocation_command': 'dbt run --profiles-dir .', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'hints_enabled': 'True', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m20:44:49.592630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81ee37a10>]}
+[0m20:44:49.636431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d822188e10>]}
+[0m20:44:49.639863 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m20:44:49.721839 [debug] [MainThread]: checksum: 5a19c912fec7f7f49a2b3046871e99414bace22bdc7120ca744e416835b0f05d, vars: {}, profile: fuel_price, target: dev, version: 1.12.5
+[0m20:44:49.860651 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m20:44:49.862338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81f926b90>]}
+[0m20:44:50.892956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81d5dde90>]}
+[0m20:44:50.988352 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m20:44:50.995859 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m20:44:51.021967 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt_project/target/osi_document.json
+[0m20:44:51.043694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81f950c90>]}
+[0m20:44:51.044790 [info ] [MainThread]: Found 4 models, 14 data tests, 3 sources, 478 macros
+[0m20:44:51.046171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81cdf6490>]}
+[0m20:44:51.049765 [info ] [MainThread]: 
+[0m20:44:51.051070 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:44:51.052612 [info ] [MainThread]: 
+[0m20:44:51.054237 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:44:51.059323 [debug] [ThreadPool]: Acquiring new postgres connection 'list_fuel_db'
+[0m20:44:51.059980 [debug] [ThreadPool]: Acquiring new postgres connection 'list_fuel_db'
+[0m20:44:51.124968 [debug] [ThreadPool]: Using postgres connection "list_fuel_db"
+[0m20:44:51.125376 [debug] [ThreadPool]: Using postgres connection "list_fuel_db"
+[0m20:44:51.126660 [debug] [ThreadPool]: On list_fuel_db: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "list_fuel_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:44:51.127789 [debug] [ThreadPool]: On list_fuel_db: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "list_fuel_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:44:51.128706 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:44:51.129574 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:44:51.156689 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.028 seconds
+[0m20:44:51.156972 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.027 seconds
+[0m20:44:51.158480 [debug] [ThreadPool]: On list_fuel_db: Close
+[0m20:44:51.160061 [debug] [ThreadPool]: On list_fuel_db: Close
+[0m20:44:51.162255 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_fuel_db, now create_fuel_db_gold)
+[0m20:44:51.163571 [debug] [ThreadPool]: Creating schema "database: "fuel_db"
+schema: "gold"
+"
+[0m20:44:51.166825 [debug] [ThreadPool]: Using postgres connection "create_fuel_db_gold"
+[0m20:44:51.167763 [debug] [ThreadPool]: On create_fuel_db_gold: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "create_fuel_db_gold"} */
+create schema if not exists "gold"
+[0m20:44:51.169017 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:44:51.182424 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.013 seconds
+[0m20:44:51.184494 [debug] [ThreadPool]: On create_fuel_db_gold: COMMIT
+[0m20:44:51.185521 [debug] [ThreadPool]: Using postgres connection "create_fuel_db_gold"
+[0m20:44:51.186535 [debug] [ThreadPool]: On create_fuel_db_gold: COMMIT
+[0m20:44:51.189028 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m20:44:51.190061 [debug] [ThreadPool]: On create_fuel_db_gold: Close
+[0m20:44:51.192534 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_fuel_db_gold, now list_fuel_db_gold)
+[0m20:44:51.193195 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_fuel_db, now list_fuel_db_silver)
+[0m20:44:51.197865 [debug] [ThreadPool]: Using postgres connection "list_fuel_db_gold"
+[0m20:44:51.200422 [debug] [ThreadPool]: Using postgres connection "list_fuel_db_silver"
+[0m20:44:51.201943 [debug] [ThreadPool]: On list_fuel_db_gold: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "list_fuel_db_gold"} */
+select
+      'fuel_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'fuel_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'fuel_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+    union all
+    select distinct
+     'fuel_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'gold'
+  
+[0m20:44:51.203162 [debug] [ThreadPool]: On list_fuel_db_silver: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "list_fuel_db_silver"} */
+select
+      'fuel_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'fuel_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'fuel_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+    union all
+    select distinct
+     'fuel_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'silver'
+  
+[0m20:44:51.204584 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:44:51.205576 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:44:51.227862 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.022 seconds
+[0m20:44:51.228308 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.024 seconds
+[0m20:44:51.231882 [debug] [ThreadPool]: On list_fuel_db_silver: ROLLBACK
+[0m20:44:51.233208 [debug] [ThreadPool]: On list_fuel_db_gold: ROLLBACK
+[0m20:44:51.234300 [debug] [ThreadPool]: On list_fuel_db_silver: Close
+[0m20:44:51.235160 [debug] [ThreadPool]: On list_fuel_db_gold: Close
+[0m20:44:51.240134 [debug] [MainThread]: Using postgres connection "master"
+[0m20:44:51.241264 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m20:44:51.242235 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:44:51.255263 [debug] [MainThread]: SQL status: SELECT 0 in 0.013 seconds
+[0m20:44:51.257026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81c98b490>]}
+[0m20:44:51.258037 [debug] [MainThread]: On master: ROLLBACK
+[0m20:44:51.259120 [debug] [MainThread]: On master: COMMIT
+[0m20:44:51.260348 [debug] [MainThread]: Using postgres connection "master"
+[0m20:44:51.261320 [debug] [MainThread]: On master: COMMIT
+[0m20:44:51.262537 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:44:51.263394 [debug] [MainThread]: On master: Close
+[0m20:44:51.274137 [debug] [Thread-1 (]: Began running node model.fuel_price.stg_brent_monthly
+[0m20:44:51.274467 [debug] [Thread-2 (]: Began running node model.fuel_price.stg_thai_fuel_monthly
+[0m20:44:51.274783 [debug] [Thread-3 (]: Began running node model.fuel_price.stg_usdthb_monthly
+[0m20:44:51.276190 [info ] [Thread-1 (]: 1 of 4 START sql table model silver.stg_brent_monthly .......................... [RUN]
+[0m20:44:51.277333 [info ] [Thread-2 (]: 2 of 4 START sql table model silver.stg_thai_fuel_monthly ...................... [RUN]
+[0m20:44:51.279918 [info ] [Thread-3 (]: 3 of 4 START sql table model silver.stg_usdthb_monthly ......................... [RUN]
+[0m20:44:51.282172 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_fuel_db_gold, now model.fuel_price.stg_brent_monthly)
+[0m20:44:51.283382 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_fuel_db_silver, now model.fuel_price.stg_thai_fuel_monthly)
+[0m20:44:51.284606 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.fuel_price.stg_usdthb_monthly'
+[0m20:44:51.285500 [debug] [Thread-1 (]: Began compiling node model.fuel_price.stg_brent_monthly
+[0m20:44:51.286647 [debug] [Thread-2 (]: Began compiling node model.fuel_price.stg_thai_fuel_monthly
+[0m20:44:51.287920 [debug] [Thread-3 (]: Began compiling node model.fuel_price.stg_usdthb_monthly
+[0m20:44:51.294534 [debug] [Thread-1 (]: Writing injected SQL for node "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.298777 [debug] [Thread-2 (]: Writing injected SQL for node "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.301727 [debug] [Thread-3 (]: Writing injected SQL for node "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.307689 [debug] [Thread-1 (]: Began executing node model.fuel_price.stg_brent_monthly
+[0m20:44:51.308571 [debug] [Thread-2 (]: Began executing node model.fuel_price.stg_thai_fuel_monthly
+[0m20:44:51.315834 [debug] [Thread-3 (]: Began executing node model.fuel_price.stg_usdthb_monthly
+[0m20:44:51.332244 [debug] [Thread-1 (]: Writing runtime sql for node "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.334688 [debug] [Thread-2 (]: Writing runtime sql for node "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.337213 [debug] [Thread-3 (]: Writing runtime sql for node "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.342350 [debug] [Thread-1 (]: Using postgres connection "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.342649 [debug] [Thread-3 (]: Using postgres connection "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.343698 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_brent_monthly"} */
+
+  
+    
+
+  create  table "fuel_db"."silver"."stg_brent_monthly__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    date_trunc('month', period)::date as month,
+    avg(value) as brent_usd_per_bbl,
+    count(*) as n_days
+from "fuel_db"."bronze"."eia_brent_daily"
+where value is not null
+group by 1
+  );
+  
+[0m20:44:51.344231 [debug] [Thread-2 (]: Using postgres connection "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.345076 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_usdthb_monthly"} */
+
+  
+    
+
+  create  table "fuel_db"."silver"."stg_usdthb_monthly__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    date_trunc('month', period)::date as month,
+    avg(usd_thb) as usd_thb,
+    count(*) as n_days
+from "fuel_db"."bronze"."fred_usdthb_daily"
+where usd_thb is not null
+group by 1
+  );
+  
+[0m20:44:51.346006 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:44:51.347098 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_thai_fuel_monthly"} */
+
+  
+    
+
+  create  table "fuel_db"."silver"."stg_thai_fuel_monthly__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select
+    date_trunc('month', obs_date)::date as month,
+    item,
+    avg(price_baht) as retail_price_baht,
+    count(*) as n_obs
+from "fuel_db"."bronze"."eppo_fuel_prices"
+where country = 'TH-THAILAND'
+  and price_baht is not null
+group by 1, 2
+  );
+  
+[0m20:44:51.348027 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:44:51.349879 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:44:51.378859 [debug] [Thread-3 (]: SQL status: SELECT 550 in 0.031 seconds
+[0m20:44:51.386180 [debug] [Thread-3 (]: Using postgres connection "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.386753 [debug] [Thread-1 (]: SQL status: SELECT 474 in 0.041 seconds
+[0m20:44:51.387536 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_usdthb_monthly"} */
+alter table "fuel_db"."silver"."stg_usdthb_monthly" rename to "stg_usdthb_monthly__dbt_backup"
+[0m20:44:51.389674 [debug] [Thread-1 (]: Using postgres connection "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.391437 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:44:51.392483 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_brent_monthly"} */
+alter table "fuel_db"."silver"."stg_brent_monthly" rename to "stg_brent_monthly__dbt_backup"
+[0m20:44:51.394397 [debug] [Thread-3 (]: Using postgres connection "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.395814 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:44:51.396268 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_usdthb_monthly"} */
+alter table "fuel_db"."silver"."stg_usdthb_monthly__dbt_tmp" rename to "stg_usdthb_monthly"
+[0m20:44:51.398415 [debug] [Thread-1 (]: Using postgres connection "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.400073 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:44:51.401054 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_brent_monthly"} */
+alter table "fuel_db"."silver"."stg_brent_monthly__dbt_tmp" rename to "stg_brent_monthly"
+[0m20:44:51.407212 [debug] [Thread-2 (]: SQL status: SELECT 525 in 0.057 seconds
+[0m20:44:51.412847 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: COMMIT
+[0m20:44:51.414603 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:44:51.416476 [debug] [Thread-2 (]: Using postgres connection "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.417510 [debug] [Thread-3 (]: Using postgres connection "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.419180 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: COMMIT
+[0m20:44:51.420531 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_thai_fuel_monthly"} */
+alter table "fuel_db"."silver"."stg_thai_fuel_monthly" rename to "stg_thai_fuel_monthly__dbt_backup"
+[0m20:44:51.421598 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: COMMIT
+[0m20:44:51.422578 [debug] [Thread-1 (]: Using postgres connection "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.424159 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m20:44:51.425734 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: COMMIT
+[0m20:44:51.426045 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m20:44:51.428812 [debug] [Thread-2 (]: Using postgres connection "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.434755 [debug] [Thread-3 (]: Applying DROP to: "fuel_db"."silver"."stg_usdthb_monthly__dbt_backup"
+[0m20:44:51.435090 [debug] [Thread-1 (]: SQL status: COMMIT in 0.005 seconds
+[0m20:44:51.435972 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_thai_fuel_monthly"} */
+alter table "fuel_db"."silver"."stg_thai_fuel_monthly__dbt_tmp" rename to "stg_thai_fuel_monthly"
+[0m20:44:51.441397 [debug] [Thread-3 (]: Using postgres connection "model.fuel_price.stg_usdthb_monthly"
+[0m20:44:51.443314 [debug] [Thread-1 (]: Applying DROP to: "fuel_db"."silver"."stg_brent_monthly__dbt_backup"
+[0m20:44:51.444582 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:44:51.444939 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_usdthb_monthly"} */
+drop table if exists "fuel_db"."silver"."stg_usdthb_monthly__dbt_backup" cascade
+[0m20:44:51.445960 [debug] [Thread-1 (]: Using postgres connection "model.fuel_price.stg_brent_monthly"
+[0m20:44:51.447780 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: COMMIT
+[0m20:44:51.452288 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_brent_monthly"} */
+drop table if exists "fuel_db"."silver"."stg_brent_monthly__dbt_backup" cascade
+[0m20:44:51.453229 [debug] [Thread-2 (]: Using postgres connection "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.454845 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: COMMIT
+[0m20:44:51.456593 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:44:51.458918 [debug] [Thread-2 (]: Applying DROP to: "fuel_db"."silver"."stg_thai_fuel_monthly__dbt_backup"
+[0m20:44:51.459244 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.005 seconds
+[0m20:44:51.459604 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.011 seconds
+[0m20:44:51.461096 [debug] [Thread-2 (]: Using postgres connection "model.fuel_price.stg_thai_fuel_monthly"
+[0m20:44:51.464642 [debug] [Thread-1 (]: On model.fuel_price.stg_brent_monthly: Close
+[0m20:44:51.466969 [debug] [Thread-3 (]: On model.fuel_price.stg_usdthb_monthly: Close
+[0m20:44:51.468303 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.stg_thai_fuel_monthly"} */
+drop table if exists "fuel_db"."silver"."stg_thai_fuel_monthly__dbt_backup" cascade
+[0m20:44:51.470882 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81941f810>]}
+[0m20:44:51.471578 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d819547310>]}
+[0m20:44:51.473744 [info ] [Thread-1 (]: 1 of 4 OK created sql table model silver.stg_brent_monthly ..................... [[32mSELECT 474[0m in 0.19s]
+[0m20:44:51.474876 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m20:44:51.475700 [info ] [Thread-3 (]: 3 of 4 OK created sql table model silver.stg_usdthb_monthly .................... [[32mSELECT 550[0m in 0.19s]
+[0m20:44:51.478561 [debug] [Thread-1 (]: Finished running node model.fuel_price.stg_brent_monthly
+[0m20:44:51.480683 [debug] [Thread-2 (]: On model.fuel_price.stg_thai_fuel_monthly: Close
+[0m20:44:51.482291 [debug] [Thread-3 (]: Finished running node model.fuel_price.stg_usdthb_monthly
+[0m20:44:51.484713 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81a91eed0>]}
+[0m20:44:51.486830 [info ] [Thread-2 (]: 2 of 4 OK created sql table model silver.stg_thai_fuel_monthly ................. [[32mSELECT 525[0m in 0.20s]
+[0m20:44:51.488144 [debug] [Thread-2 (]: Finished running node model.fuel_price.stg_thai_fuel_monthly
+[0m20:44:51.490296 [debug] [Thread-4 (]: Began running node model.fuel_price.fct_fuel_price_monthly
+[0m20:44:51.491524 [info ] [Thread-4 (]: 4 of 4 START sql table model gold.fct_fuel_price_monthly ....................... [RUN]
+[0m20:44:51.492893 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.fuel_price.fct_fuel_price_monthly'
+[0m20:44:51.494072 [debug] [Thread-4 (]: Began compiling node model.fuel_price.fct_fuel_price_monthly
+[0m20:44:51.497698 [debug] [Thread-4 (]: Writing injected SQL for node "model.fuel_price.fct_fuel_price_monthly"
+[0m20:44:51.509902 [debug] [Thread-4 (]: Began executing node model.fuel_price.fct_fuel_price_monthly
+[0m20:44:51.512941 [debug] [Thread-4 (]: Writing runtime sql for node "model.fuel_price.fct_fuel_price_monthly"
+[0m20:44:51.524914 [debug] [Thread-4 (]: Using postgres connection "model.fuel_price.fct_fuel_price_monthly"
+[0m20:44:51.526020 [debug] [Thread-4 (]: On model.fuel_price.fct_fuel_price_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.fct_fuel_price_monthly"} */
+
+  
+    
+
+  create  table "fuel_db"."gold"."fct_fuel_price_monthly__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with fuel as (
+    select month, item, retail_price_baht
+    from "fuel_db"."silver"."stg_thai_fuel_monthly"
+),
+
+brent as (
+    select month, brent_usd_per_bbl
+    from "fuel_db"."silver"."stg_brent_monthly"
+),
+
+fx as (
+    select month, usd_thb
+    from "fuel_db"."silver"."stg_usdthb_monthly"
+),
+
+joined as (
+    select
+        f.month,
+        f.item,
+        f.retail_price_baht,
+        b.brent_usd_per_bbl,
+        x.usd_thb,
+        b.brent_usd_per_bbl * x.usd_thb / 158.987 as brent_baht_per_litre
+    from fuel f
+    inner join brent b on f.month = b.month
+    inner join fx x on f.month = x.month
+)
+
+select
+    *,
+    lag(retail_price_baht, 1) over (partition by item order by month) as retail_price_lag1,
+    lag(brent_baht_per_litre, 1) over (partition by item order by month) as brent_baht_per_litre_lag1,
+    lag(brent_baht_per_litre, 2) over (partition by item order by month) as brent_baht_per_litre_lag2,
+    lag(brent_baht_per_litre, 3) over (partition by item order by month) as brent_baht_per_litre_lag3
+from joined
+  );
+  
+[0m20:44:51.526950 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:44:51.546645 [debug] [Thread-4 (]: SQL status: SELECT 525 in 0.020 seconds
+[0m20:44:51.549169 [debug] [Thread-4 (]: Using postgres connection "model.fuel_price.fct_fuel_price_monthly"
+[0m20:44:51.550110 [debug] [Thread-4 (]: On model.fuel_price.fct_fuel_price_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.fct_fuel_price_monthly"} */
+alter table "fuel_db"."gold"."fct_fuel_price_monthly__dbt_tmp" rename to "fct_fuel_price_monthly"
+[0m20:44:51.551620 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m20:44:51.553249 [debug] [Thread-4 (]: On model.fuel_price.fct_fuel_price_monthly: COMMIT
+[0m20:44:51.554172 [debug] [Thread-4 (]: Using postgres connection "model.fuel_price.fct_fuel_price_monthly"
+[0m20:44:51.555038 [debug] [Thread-4 (]: On model.fuel_price.fct_fuel_price_monthly: COMMIT
+[0m20:44:51.557180 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:44:51.559101 [debug] [Thread-4 (]: Applying DROP to: "fuel_db"."gold"."fct_fuel_price_monthly__dbt_backup"
+[0m20:44:51.560641 [debug] [Thread-4 (]: Using postgres connection "model.fuel_price.fct_fuel_price_monthly"
+[0m20:44:51.561572 [debug] [Thread-4 (]: On model.fuel_price.fct_fuel_price_monthly: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "model.fuel_price.fct_fuel_price_monthly"} */
+drop table if exists "fuel_db"."gold"."fct_fuel_price_monthly__dbt_backup" cascade
+[0m20:44:51.562853 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m20:44:51.564485 [debug] [Thread-4 (]: On model.fuel_price.fct_fuel_price_monthly: Close
+[0m20:44:51.565827 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '31ec381a-c23d-45a8-aa10-bcf7cb39ffba', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d8195210d0>]}
+[0m20:44:51.567295 [info ] [Thread-4 (]: 4 of 4 OK created sql table model gold.fct_fuel_price_monthly .................. [[32mSELECT 525[0m in 0.07s]
+[0m20:44:51.568662 [debug] [Thread-4 (]: Finished running node model.fuel_price.fct_fuel_price_monthly
+[0m20:44:51.572759 [debug] [MainThread]: On master: COMMIT
+[0m20:44:51.574537 [debug] [MainThread]: Using postgres connection "master"
+[0m20:44:51.575577 [debug] [MainThread]: On master: COMMIT
+[0m20:44:51.576690 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:44:51.586985 [debug] [MainThread]: SQL status: COMMIT in 0.010 seconds
+[0m20:44:51.588297 [debug] [MainThread]: On master: Close
+[0m20:44:51.589422 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:44:51.590478 [debug] [MainThread]: Connection 'model.fuel_price.stg_brent_monthly' was properly closed.
+[0m20:44:51.591577 [debug] [MainThread]: Connection 'model.fuel_price.stg_thai_fuel_monthly' was properly closed.
+[0m20:44:51.592574 [debug] [MainThread]: Connection 'model.fuel_price.stg_usdthb_monthly' was properly closed.
+[0m20:44:51.593609 [debug] [MainThread]: Connection 'model.fuel_price.fct_fuel_price_monthly' was properly closed.
+[0m20:44:51.594739 [info ] [MainThread]: 
+[0m20:44:51.595884 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m20:44:51.598366 [debug] [MainThread]: Command end result
+[0m20:44:51.663284 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m20:44:51.668569 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m20:44:51.674210 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt_project/target/osi_document.json
+[0m20:44:51.682689 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m20:44:51.683781 [info ] [MainThread]: 
+[0m20:44:51.684989 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:44:51.687398 [info ] [MainThread]: 
+[0m20:44:51.688495 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m20:44:51.691260 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.3516471, "process_in_blocks": "139724", "process_kernel_time": 1.058017, "process_mem_max_rss": "143276", "process_out_blocks": "2344", "process_user_time": 2.629013}
+[0m20:44:51.692806 [debug] [MainThread]: Command `dbt run` succeeded at 20:44:51.692675 after 2.35 seconds
+[0m20:44:51.693932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81eeb0550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81eea74d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75d81eea78d0>]}
+[0m20:44:51.694923 [debug] [MainThread]: Flushing usage events
+[0m20:44:52.830309 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:45:13.038749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b274b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b2763c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b29c6450>]}
+
+
+============================== 20:45:13.045355 | f993dedb-c51a-433f-9cb5-c90176134bc7 ==============================
+[0m20:45:13.045355 [info ] [MainThread]: Running with dbt=1.12.5
+[0m20:45:13.046873 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'log_path': '/usr/app/dbt_project/logs', 'fail_fast': 'False', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'debug': 'False', 'target_path': 'None', 'printer_width': '80', 'partial_parse': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'hints_enabled': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'no_print': 'None', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test --profiles-dir .', 'version_check': 'True', 'introspect': 'True', 'profiles_dir': '.'}
+[0m20:45:13.187971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f993dedb-c51a-433f-9cb5-c90176134bc7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b178be10>]}
+[0m20:45:13.232812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f993dedb-c51a-433f-9cb5-c90176134bc7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b5ab5ad0>]}
+[0m20:45:13.234930 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m20:45:13.309974 [debug] [MainThread]: checksum: 5a19c912fec7f7f49a2b3046871e99414bace22bdc7120ca744e416835b0f05d, vars: {}, profile: fuel_price, target: dev, version: 1.12.5
+[0m20:45:13.538368 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:45:13.539609 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:45:13.540390 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:45:13.546979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f993dedb-c51a-433f-9cb5-c90176134bc7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b2974850>]}
+[0m20:45:13.660093 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m20:45:13.665175 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m20:45:13.677802 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt_project/target/osi_document.json
+[0m20:45:13.702531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f993dedb-c51a-433f-9cb5-c90176134bc7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b071dfd0>]}
+[0m20:45:13.703845 [info ] [MainThread]: Found 4 models, 14 data tests, 3 sources, 478 macros
+[0m20:45:13.705098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f993dedb-c51a-433f-9cb5-c90176134bc7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b1324e50>]}
+[0m20:45:13.709119 [info ] [MainThread]: 
+[0m20:45:13.710357 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:45:13.712019 [info ] [MainThread]: 
+[0m20:45:13.713392 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:45:13.718567 [debug] [ThreadPool]: Acquiring new postgres connection 'list_fuel_db_silver'
+[0m20:45:13.719202 [debug] [ThreadPool]: Acquiring new postgres connection 'list_fuel_db_gold'
+[0m20:45:13.766479 [debug] [ThreadPool]: Using postgres connection "list_fuel_db_silver"
+[0m20:45:13.766922 [debug] [ThreadPool]: Using postgres connection "list_fuel_db_gold"
+[0m20:45:13.768059 [debug] [ThreadPool]: On list_fuel_db_silver: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "list_fuel_db_silver"} */
+select
+      'fuel_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'fuel_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'fuel_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+    union all
+    select distinct
+     'fuel_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'silver'
+  
+[0m20:45:13.769036 [debug] [ThreadPool]: On list_fuel_db_gold: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "list_fuel_db_gold"} */
+select
+      'fuel_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'fuel_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'fuel_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+    union all
+    select distinct
+     'fuel_db' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'gold'
+  
+[0m20:45:13.770078 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:45:13.771042 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:45:13.789202 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.018 seconds
+[0m20:45:13.789596 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.020 seconds
+[0m20:45:13.791498 [debug] [ThreadPool]: On list_fuel_db_gold: ROLLBACK
+[0m20:45:13.793106 [debug] [ThreadPool]: On list_fuel_db_silver: ROLLBACK
+[0m20:45:13.794297 [debug] [ThreadPool]: On list_fuel_db_gold: Close
+[0m20:45:13.795124 [debug] [ThreadPool]: On list_fuel_db_silver: Close
+[0m20:45:13.800039 [debug] [MainThread]: Using postgres connection "master"
+[0m20:45:13.801153 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m20:45:13.802013 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:45:13.811845 [debug] [MainThread]: SQL status: SELECT 0 in 0.010 seconds
+[0m20:45:13.813545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f993dedb-c51a-433f-9cb5-c90176134bc7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b070f450>]}
+[0m20:45:13.814749 [debug] [MainThread]: On master: ROLLBACK
+[0m20:45:13.815948 [debug] [MainThread]: On master: COMMIT
+[0m20:45:13.816806 [debug] [MainThread]: Using postgres connection "master"
+[0m20:45:13.817683 [debug] [MainThread]: On master: COMMIT
+[0m20:45:13.818826 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:45:13.819714 [debug] [MainThread]: On master: Close
+[0m20:45:13.827160 [debug] [Thread-1 (]: Began running node test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7
+[0m20:45:13.827469 [debug] [Thread-2 (]: Began running node test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4
+[0m20:45:13.827809 [debug] [Thread-3 (]: Began running node test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd
+[0m20:45:13.828181 [debug] [Thread-4 (]: Began running node test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c
+[0m20:45:13.829053 [info ] [Thread-1 (]: 1 of 14 START test accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_  [RUN]
+[0m20:45:13.830574 [info ] [Thread-2 (]: 2 of 14 START test not_null_fct_fuel_price_monthly_brent_baht_per_litre ........ [RUN]
+[0m20:45:13.833127 [info ] [Thread-3 (]: 3 of 14 START test not_null_fct_fuel_price_monthly_item ........................ [RUN]
+[0m20:45:13.834166 [info ] [Thread-4 (]: 4 of 14 START test not_null_fct_fuel_price_monthly_month ....................... [RUN]
+[0m20:45:13.835924 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_fuel_db_silver, now test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7)
+[0m20:45:13.837817 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_fuel_db_gold, now test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4)
+[0m20:45:13.839068 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd'
+[0m20:45:13.840121 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c'
+[0m20:45:13.841330 [debug] [Thread-1 (]: Began compiling node test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7
+[0m20:45:13.842811 [debug] [Thread-2 (]: Began compiling node test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4
+[0m20:45:13.844192 [debug] [Thread-3 (]: Began compiling node test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd
+[0m20:45:13.845069 [debug] [Thread-4 (]: Began compiling node test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c
+[0m20:45:13.863676 [debug] [Thread-1 (]: Writing injected SQL for node "test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7"
+[0m20:45:13.872570 [debug] [Thread-2 (]: Writing injected SQL for node "test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4"
+[0m20:45:13.877786 [debug] [Thread-3 (]: Writing injected SQL for node "test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd"
+[0m20:45:13.882760 [debug] [Thread-4 (]: Writing injected SQL for node "test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c"
+[0m20:45:13.891028 [debug] [Thread-1 (]: Began executing node test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7
+[0m20:45:13.902813 [debug] [Thread-2 (]: Began executing node test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4
+[0m20:45:13.904721 [debug] [Thread-1 (]: Writing runtime sql for node "test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7"
+[0m20:45:13.905642 [debug] [Thread-3 (]: Began executing node test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd
+[0m20:45:13.906965 [debug] [Thread-2 (]: Writing runtime sql for node "test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4"
+[0m20:45:13.907240 [debug] [Thread-4 (]: Began executing node test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c
+[0m20:45:13.909789 [debug] [Thread-3 (]: Writing runtime sql for node "test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd"
+[0m20:45:13.912358 [debug] [Thread-4 (]: Writing runtime sql for node "test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c"
+[0m20:45:13.917771 [debug] [Thread-2 (]: Using postgres connection "test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4"
+[0m20:45:13.919126 [debug] [Thread-2 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select brent_baht_per_litre
+from "fuel_db"."gold"."fct_fuel_price_monthly"
+where brent_baht_per_litre is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:13.919924 [debug] [Thread-4 (]: Using postgres connection "test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c"
+[0m20:45:13.920261 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:45:13.920611 [debug] [Thread-1 (]: Using postgres connection "test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7"
+[0m20:45:13.921446 [debug] [Thread-4 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "fuel_db"."gold"."fct_fuel_price_monthly"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:13.922066 [debug] [Thread-3 (]: Using postgres connection "test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd"
+[0m20:45:13.923566 [debug] [Thread-1 (]: On test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        item as value_field,
+        count(*) as n_records
+
+    from "fuel_db"."gold"."fct_fuel_price_monthly"
+    group by item
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1033G-E10','1034-ULG 95','1052-HSD (B7)'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:13.924584 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:45:13.926176 [debug] [Thread-3 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select item
+from "fuel_db"."gold"."fct_fuel_price_monthly"
+where item is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:13.927276 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:45:13.929391 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:45:13.933195 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m20:45:13.938054 [debug] [Thread-2 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4: ROLLBACK
+[0m20:45:13.939681 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m20:45:13.939987 [debug] [Thread-2 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4: Close
+[0m20:45:13.940257 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m20:45:13.940572 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m20:45:13.941971 [debug] [Thread-4 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c: ROLLBACK
+[0m20:45:13.943382 [info ] [Thread-2 (]: 2 of 14 PASS not_null_fct_fuel_price_monthly_brent_baht_per_litre .............. [[32mPASS[0m in 0.11s]
+[0m20:45:13.945011 [debug] [Thread-3 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd: ROLLBACK
+[0m20:45:13.948436 [debug] [Thread-1 (]: On test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7: ROLLBACK
+[0m20:45:13.949969 [debug] [Thread-4 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c: Close
+[0m20:45:13.950821 [debug] [Thread-2 (]: Finished running node test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4
+[0m20:45:13.951849 [debug] [Thread-3 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd: Close
+[0m20:45:13.952572 [debug] [Thread-1 (]: On test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7: Close
+[0m20:45:13.953655 [info ] [Thread-4 (]: 4 of 14 PASS not_null_fct_fuel_price_monthly_month ............................. [[32mPASS[0m in 0.11s]
+[0m20:45:13.955141 [debug] [Thread-2 (]: Began running node test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5
+[0m20:45:13.956492 [info ] [Thread-3 (]: 3 of 14 PASS not_null_fct_fuel_price_monthly_item .............................. [[32mPASS[0m in 0.12s]
+[0m20:45:13.958028 [info ] [Thread-1 (]: 1 of 14 PASS accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_  [[32mPASS[0m in 0.12s]
+[0m20:45:13.959188 [debug] [Thread-4 (]: Finished running node test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c
+[0m20:45:13.960471 [info ] [Thread-2 (]: 5 of 14 START test not_null_fct_fuel_price_monthly_retail_price_baht ........... [RUN]
+[0m20:45:13.962308 [debug] [Thread-3 (]: Finished running node test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd
+[0m20:45:13.963389 [debug] [Thread-1 (]: Finished running node test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7
+[0m20:45:13.964433 [debug] [Thread-4 (]: Began running node test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93
+[0m20:45:13.965537 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_fct_fuel_price_monthly_brent_baht_per_litre.2483a894d4, now test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5)
+[0m20:45:13.966530 [debug] [Thread-3 (]: Began running node test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6
+[0m20:45:13.967770 [debug] [Thread-1 (]: Began running node test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759
+[0m20:45:13.968769 [info ] [Thread-4 (]: 6 of 14 START test not_null_stg_brent_monthly_brent_usd_per_bbl ................ [RUN]
+[0m20:45:13.970137 [debug] [Thread-2 (]: Began compiling node test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5
+[0m20:45:13.971244 [info ] [Thread-3 (]: 7 of 14 START test not_null_stg_brent_monthly_month ............................ [RUN]
+[0m20:45:13.972363 [info ] [Thread-1 (]: 8 of 14 START test not_null_stg_thai_fuel_monthly_item ......................... [RUN]
+[0m20:45:13.973762 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_fct_fuel_price_monthly_month.d6c73d0e4c, now test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93)
+[0m20:45:13.980203 [debug] [Thread-2 (]: Writing injected SQL for node "test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5"
+[0m20:45:13.981917 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_fct_fuel_price_monthly_item.4d68dc06cd, now test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6)
+[0m20:45:13.983498 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.fuel_price.accepted_values_fct_fuel_price_monthly_item__1033G_E10__1034_ULG_95__1052_HSD_B7_.36940d7cd7, now test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759)
+[0m20:45:13.985358 [debug] [Thread-4 (]: Began compiling node test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93
+[0m20:45:13.987578 [debug] [Thread-3 (]: Began compiling node test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6
+[0m20:45:13.988799 [debug] [Thread-1 (]: Began compiling node test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759
+[0m20:45:13.994417 [debug] [Thread-4 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93"
+[0m20:45:13.999832 [debug] [Thread-3 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6"
+[0m20:45:14.000167 [debug] [Thread-2 (]: Began executing node test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5
+[0m20:45:14.004524 [debug] [Thread-1 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759"
+[0m20:45:14.008243 [debug] [Thread-2 (]: Writing runtime sql for node "test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5"
+[0m20:45:14.013093 [debug] [Thread-4 (]: Began executing node test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93
+[0m20:45:14.013592 [debug] [Thread-3 (]: Began executing node test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6
+[0m20:45:14.016591 [debug] [Thread-4 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93"
+[0m20:45:14.017003 [debug] [Thread-1 (]: Began executing node test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759
+[0m20:45:14.018759 [debug] [Thread-3 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6"
+[0m20:45:14.019093 [debug] [Thread-2 (]: Using postgres connection "test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5"
+[0m20:45:14.021622 [debug] [Thread-1 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759"
+[0m20:45:14.023497 [debug] [Thread-2 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select retail_price_baht
+from "fuel_db"."gold"."fct_fuel_price_monthly"
+where retail_price_baht is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.025743 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:45:14.027067 [debug] [Thread-4 (]: Using postgres connection "test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93"
+[0m20:45:14.027559 [debug] [Thread-3 (]: Using postgres connection "test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6"
+[0m20:45:14.028543 [debug] [Thread-1 (]: Using postgres connection "test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759"
+[0m20:45:14.028831 [debug] [Thread-4 (]: On test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select brent_usd_per_bbl
+from "fuel_db"."silver"."stg_brent_monthly"
+where brent_usd_per_bbl is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.030151 [debug] [Thread-3 (]: On test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "fuel_db"."silver"."stg_brent_monthly"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.031234 [debug] [Thread-1 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select item
+from "fuel_db"."silver"."stg_thai_fuel_monthly"
+where item is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.032228 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m20:45:14.033302 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m20:45:14.033679 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.008 seconds
+[0m20:45:14.034514 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:45:14.038070 [debug] [Thread-2 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5: ROLLBACK
+[0m20:45:14.040120 [debug] [Thread-2 (]: On test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5: Close
+[0m20:45:14.042169 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:45:14.041754 [info ] [Thread-2 (]: 5 of 14 PASS not_null_fct_fuel_price_monthly_retail_price_baht ................. [[32mPASS[0m in 0.08s]
+[0m20:45:14.043113 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:45:14.046162 [debug] [Thread-4 (]: On test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93: ROLLBACK
+[0m20:45:14.047561 [debug] [Thread-2 (]: Finished running node test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5
+[0m20:45:14.049147 [debug] [Thread-3 (]: On test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6: ROLLBACK
+[0m20:45:14.049430 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m20:45:14.050528 [debug] [Thread-4 (]: On test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93: Close
+[0m20:45:14.051764 [debug] [Thread-2 (]: Began running node test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a
+[0m20:45:14.053020 [debug] [Thread-3 (]: On test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6: Close
+[0m20:45:14.054927 [debug] [Thread-1 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759: ROLLBACK
+[0m20:45:14.056533 [info ] [Thread-4 (]: 6 of 14 PASS not_null_stg_brent_monthly_brent_usd_per_bbl ...................... [[32mPASS[0m in 0.08s]
+[0m20:45:14.058207 [info ] [Thread-2 (]: 9 of 14 START test not_null_stg_thai_fuel_monthly_month ........................ [RUN]
+[0m20:45:14.060441 [info ] [Thread-3 (]: 7 of 14 PASS not_null_stg_brent_monthly_month .................................. [[32mPASS[0m in 0.08s]
+[0m20:45:14.061817 [debug] [Thread-1 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759: Close
+[0m20:45:14.062809 [debug] [Thread-4 (]: Finished running node test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93
+[0m20:45:14.063866 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_fct_fuel_price_monthly_retail_price_baht.979c3a69b5, now test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a)
+[0m20:45:14.065224 [debug] [Thread-3 (]: Finished running node test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6
+[0m20:45:14.066531 [info ] [Thread-1 (]: 8 of 14 PASS not_null_stg_thai_fuel_monthly_item ............................... [[32mPASS[0m in 0.08s]
+[0m20:45:14.067529 [debug] [Thread-4 (]: Began running node test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a
+[0m20:45:14.068610 [debug] [Thread-2 (]: Began compiling node test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a
+[0m20:45:14.069628 [debug] [Thread-3 (]: Began running node test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832
+[0m20:45:14.070998 [debug] [Thread-1 (]: Finished running node test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759
+[0m20:45:14.072798 [info ] [Thread-4 (]: 10 of 14 START test not_null_stg_thai_fuel_monthly_retail_price_baht ........... [RUN]
+[0m20:45:14.079055 [debug] [Thread-2 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a"
+[0m20:45:14.080210 [info ] [Thread-3 (]: 11 of 14 START test not_null_stg_usdthb_monthly_month .......................... [RUN]
+[0m20:45:14.081363 [debug] [Thread-1 (]: Began running node test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43
+[0m20:45:14.082526 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_stg_brent_monthly_brent_usd_per_bbl.f608a31c93, now test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a)
+[0m20:45:14.084180 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_stg_brent_monthly_month.61a6edaaf6, now test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832)
+[0m20:45:14.085660 [info ] [Thread-1 (]: 12 of 14 START test not_null_stg_usdthb_monthly_usd_thb ........................ [RUN]
+[0m20:45:14.087684 [debug] [Thread-4 (]: Began compiling node test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a
+[0m20:45:14.088736 [debug] [Thread-3 (]: Began compiling node test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832
+[0m20:45:14.089960 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_stg_thai_fuel_monthly_item.f9fa643759, now test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43)
+[0m20:45:14.095208 [debug] [Thread-4 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a"
+[0m20:45:14.100040 [debug] [Thread-3 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832"
+[0m20:45:14.100386 [debug] [Thread-2 (]: Began executing node test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a
+[0m20:45:14.101219 [debug] [Thread-1 (]: Began compiling node test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43
+[0m20:45:14.104705 [debug] [Thread-2 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a"
+[0m20:45:14.110145 [debug] [Thread-1 (]: Writing injected SQL for node "test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43"
+[0m20:45:14.111783 [debug] [Thread-4 (]: Began executing node test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a
+[0m20:45:14.112398 [debug] [Thread-3 (]: Began executing node test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832
+[0m20:45:14.115122 [debug] [Thread-4 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a"
+[0m20:45:14.117177 [debug] [Thread-3 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832"
+[0m20:45:14.120889 [debug] [Thread-2 (]: Using postgres connection "test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a"
+[0m20:45:14.121543 [debug] [Thread-1 (]: Began executing node test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43
+[0m20:45:14.122576 [debug] [Thread-2 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "fuel_db"."silver"."stg_thai_fuel_monthly"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.122929 [debug] [Thread-4 (]: Using postgres connection "test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a"
+[0m20:45:14.124814 [debug] [Thread-1 (]: Writing runtime sql for node "test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43"
+[0m20:45:14.125098 [debug] [Thread-3 (]: Using postgres connection "test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832"
+[0m20:45:14.125834 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:45:14.127000 [debug] [Thread-4 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select retail_price_baht
+from "fuel_db"."silver"."stg_thai_fuel_monthly"
+where retail_price_baht is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.128837 [debug] [Thread-3 (]: On test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "fuel_db"."silver"."stg_usdthb_monthly"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.130908 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m20:45:14.132051 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m20:45:14.136286 [debug] [Thread-1 (]: Using postgres connection "test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43"
+[0m20:45:14.137518 [debug] [Thread-1 (]: On test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select usd_thb
+from "fuel_db"."silver"."stg_usdthb_monthly"
+where usd_thb is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.137839 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m20:45:14.138858 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:45:14.140566 [debug] [Thread-2 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a: ROLLBACK
+[0m20:45:14.141024 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:45:14.141694 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:45:14.143141 [debug] [Thread-2 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a: Close
+[0m20:45:14.144658 [debug] [Thread-4 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a: ROLLBACK
+[0m20:45:14.146165 [debug] [Thread-3 (]: On test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832: ROLLBACK
+[0m20:45:14.147506 [info ] [Thread-2 (]: 9 of 14 PASS not_null_stg_thai_fuel_monthly_month .............................. [[32mPASS[0m in 0.08s]
+[0m20:45:14.148804 [debug] [Thread-4 (]: On test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a: Close
+[0m20:45:14.151921 [debug] [Thread-3 (]: On test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832: Close
+[0m20:45:14.153462 [debug] [Thread-2 (]: Finished running node test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a
+[0m20:45:14.153839 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m20:45:14.156035 [info ] [Thread-4 (]: 10 of 14 PASS not_null_stg_thai_fuel_monthly_retail_price_baht ................. [[32mPASS[0m in 0.07s]
+[0m20:45:14.157797 [info ] [Thread-3 (]: 11 of 14 PASS not_null_stg_usdthb_monthly_month ................................ [[32mPASS[0m in 0.07s]
+[0m20:45:14.159031 [debug] [Thread-2 (]: Began running node test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416
+[0m20:45:14.160790 [debug] [Thread-1 (]: On test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43: ROLLBACK
+[0m20:45:14.162294 [debug] [Thread-4 (]: Finished running node test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a
+[0m20:45:14.163481 [debug] [Thread-3 (]: Finished running node test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832
+[0m20:45:14.164615 [info ] [Thread-2 (]: 13 of 14 START test unique_stg_brent_monthly_month ............................. [RUN]
+[0m20:45:14.165768 [debug] [Thread-1 (]: On test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43: Close
+[0m20:45:14.166595 [debug] [Thread-4 (]: Began running node test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd
+[0m20:45:14.168496 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_stg_thai_fuel_monthly_month.f271651f1a, now test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416)
+[0m20:45:14.170133 [info ] [Thread-1 (]: 12 of 14 PASS not_null_stg_usdthb_monthly_usd_thb .............................. [[32mPASS[0m in 0.08s]
+[0m20:45:14.171246 [info ] [Thread-4 (]: 14 of 14 START test unique_stg_usdthb_monthly_month ............................ [RUN]
+[0m20:45:14.172292 [debug] [Thread-2 (]: Began compiling node test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416
+[0m20:45:14.173315 [debug] [Thread-1 (]: Finished running node test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43
+[0m20:45:14.174498 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.fuel_price.not_null_stg_thai_fuel_monthly_retail_price_baht.dacb7ad90a, now test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd)
+[0m20:45:14.181468 [debug] [Thread-2 (]: Writing injected SQL for node "test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416"
+[0m20:45:14.183532 [debug] [Thread-4 (]: Began compiling node test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd
+[0m20:45:14.189044 [debug] [Thread-4 (]: Writing injected SQL for node "test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd"
+[0m20:45:14.193792 [debug] [Thread-2 (]: Began executing node test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416
+[0m20:45:14.195001 [debug] [Thread-4 (]: Began executing node test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd
+[0m20:45:14.197178 [debug] [Thread-2 (]: Writing runtime sql for node "test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416"
+[0m20:45:14.199437 [debug] [Thread-4 (]: Writing runtime sql for node "test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd"
+[0m20:45:14.205384 [debug] [Thread-2 (]: Using postgres connection "test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416"
+[0m20:45:14.206510 [debug] [Thread-4 (]: Using postgres connection "test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd"
+[0m20:45:14.206830 [debug] [Thread-2 (]: On test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    month as unique_field,
+    count(*) as n_records
+
+from "fuel_db"."silver"."stg_brent_monthly"
+where month is not null
+group by month
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.207834 [debug] [Thread-4 (]: On test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd: /* {"app": "dbt", "dbt_version": "1.12.5", "profile_name": "fuel_price", "target_name": "dev", "node_id": "test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    month as unique_field,
+    count(*) as n_records
+
+from "fuel_db"."silver"."stg_usdthb_monthly"
+where month is not null
+group by month
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:45:14.208730 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m20:45:14.210036 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m20:45:14.218646 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m20:45:14.218948 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m20:45:14.220487 [debug] [Thread-2 (]: On test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416: ROLLBACK
+[0m20:45:14.221789 [debug] [Thread-4 (]: On test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd: ROLLBACK
+[0m20:45:14.222875 [debug] [Thread-2 (]: On test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416: Close
+[0m20:45:14.223721 [debug] [Thread-4 (]: On test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd: Close
+[0m20:45:14.225072 [info ] [Thread-2 (]: 13 of 14 PASS unique_stg_brent_monthly_month ................................... [[32mPASS[0m in 0.06s]
+[0m20:45:14.226770 [info ] [Thread-4 (]: 14 of 14 PASS unique_stg_usdthb_monthly_month .................................. [[32mPASS[0m in 0.05s]
+[0m20:45:14.227976 [debug] [Thread-2 (]: Finished running node test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416
+[0m20:45:14.229145 [debug] [Thread-4 (]: Finished running node test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd
+[0m20:45:14.233092 [debug] [MainThread]: On master: COMMIT
+[0m20:45:14.234209 [debug] [MainThread]: Using postgres connection "master"
+[0m20:45:14.235191 [debug] [MainThread]: On master: COMMIT
+[0m20:45:14.236085 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:45:14.243106 [debug] [MainThread]: SQL status: COMMIT in 0.007 seconds
+[0m20:45:14.244216 [debug] [MainThread]: On master: Close
+[0m20:45:14.245284 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:45:14.246262 [debug] [MainThread]: Connection 'test.fuel_price.not_null_stg_usdthb_monthly_usd_thb.d9197b7b43' was properly closed.
+[0m20:45:14.247171 [debug] [MainThread]: Connection 'test.fuel_price.unique_stg_brent_monthly_month.d9f69fb416' was properly closed.
+[0m20:45:14.247956 [debug] [MainThread]: Connection 'test.fuel_price.not_null_stg_usdthb_monthly_month.d0730c1832' was properly closed.
+[0m20:45:14.248618 [debug] [MainThread]: Connection 'test.fuel_price.unique_stg_usdthb_monthly_month.3df15e13fd' was properly closed.
+[0m20:45:14.249322 [info ] [MainThread]: 
+[0m20:45:14.250338 [info ] [MainThread]: Finished running 14 data tests in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m20:45:14.253119 [debug] [MainThread]: Command end result
+[0m20:45:14.315312 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/dbt_project/target/manifest.json
+[0m20:45:14.320448 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/dbt_project/target/semantic_manifest.json
+[0m20:45:14.325466 [debug] [MainThread]: Wrote artifact OsiDocument to /usr/app/dbt_project/target/osi_document.json
+[0m20:45:14.334502 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/dbt_project/target/run_results.json
+[0m20:45:14.335872 [info ] [MainThread]: 
+[0m20:45:14.336992 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:45:14.339692 [info ] [MainThread]: 
+[0m20:45:14.340715 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=14
+[0m20:45:14.342312 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.363464, "process_in_blocks": "2307", "process_kernel_time": 0.55239, "process_mem_max_rss": "137112", "process_out_blocks": "2344", "process_user_time": 1.834724}
+[0m20:45:14.344030 [debug] [MainThread]: Command `dbt test` succeeded at 20:45:14.343896 after 1.37 seconds
+[0m20:45:14.345042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b279fa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b28cbd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77d2b280c610>]}
+[0m20:45:14.346301 [debug] [MainThread]: Flushing usage events
+[0m20:45:15.413346 [debug] [MainThread]: An error was encountered while trying to flush usage events
