@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_brent_monthly
+    columns:
+      - name: month
+        data_tests: [not_null, unique]
+      - name: brent_usd_per_bbl
+        data_tests: [not_null]
+
+  - name: stg_usdthb_monthly
+    columns:
+      - name: month
+        data_tests: [not_null, unique]
+      - name: usd_thb
+        data_tests: [not_null]
+
+  - name: stg_thai_fuel_monthly
+    columns:
+      - name: month
+        data_tests: [not_null]
+      - name: item
+        data_tests: [not_null]
+      - name: retail_price_baht
+        data_tests: [not_null]

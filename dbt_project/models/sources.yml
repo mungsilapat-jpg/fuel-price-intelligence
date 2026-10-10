@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: eia_brent_daily
+      - name: fred_usdthb_daily
+      - name: eppo_fuel_prices
