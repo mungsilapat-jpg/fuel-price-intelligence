@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fct_fuel_price_monthly
+    columns:
+      - name: month
+        data_tests: [not_null]
+      - name: item
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['1033G-E10', '1034-ULG 95', '1052-HSD (B7)']
+      - name: retail_price_baht
+        data_tests: [not_null]
+      - name: brent_baht_per_litre
+        data_tests: [not_null]
