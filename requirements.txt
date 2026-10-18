@@ -1,0 +1,7 @@
+﻿requests
+pandas
+pyarrow
+python-dotenv
+sqlalchemy>=2.0,<2.1
+pg8000
+numpy
