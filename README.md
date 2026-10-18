@@ -37,7 +37,7 @@ The sources have different frequencies (daily, weekly, and monthly), so all of t
 
 ## Pipeline layers
 
-- **Bronze:** Raw data is loaded into PostgreSQL as received, with a `loaded_at` timestamp added. Each load replaces the whole table (Brent 9,993 rows, USD/THB 11,936 rows, EPPO 29,293 rows covering many countries).
+- **Bronze:** Raw data is loaded into PostgreSQL as received, with a `loaded_at` timestamp added. Each load replaces the whole table (Brent 9,999 rows, USD/THB about 11,941 rows, EPPO 29,293 rows covering many countries).
 - **Silver:** dbt keeps Thai rows only, removes null values, and averages every source to monthly (Brent 474 months, USD/THB 550 months, Thai fuel prices 525 rows: 3 fuel types x 175 months).
 - **Gold:** dbt joins the three monthly tables on `month` into `fct_fuel_price_monthly` (525 rows, 2012-01 to 2026-07). Brent is converted to THB per litre (USD per barrel x USD/THB / 158.987), and 1-3 month lagged features are added for forecasting.
 
@@ -46,7 +46,7 @@ The sources have different frequencies (daily, weekly, and monthly), so all of t
 ## Data quality
 
 - **Automated tests:** 14 dbt tests run on the Silver and Gold layers. They check that key columns are not null, that months are unique in the Brent and USD/THB tables, and that fuel type is one of the three expected values. All pass.
-- **Manual checks:** The first Brent pull returned exactly 5,000 rows, so I suspected the API had truncated the data. I added pagination and fetched page by page, which returned 9,993 rows.
+- **Manual checks:** The first Brent pull returned exactly 5,000 rows, so I suspected the API had truncated the data. I added pagination and fetched page by page, which returned about 10,000 rows.
 - **Known gaps:** Passing tests does not guarantee the data is correct, because tests only check the rules I have written.
 
 ![dbt test results: all 14 tests pass](docs/images/dbt-test-pass.png)
@@ -108,6 +108,13 @@ Run all commands from the project root.
    .venv\Scripts\activate
    pip install -r requirements.txt
 ```
+**Quick start:** after steps 1-3, run the whole pipeline with one command. It starts PostgreSQL, ingests, loads, runs dbt and its tests, and trains the models (about 3 minutes):
+
+```powershell
+python run_pipeline.py
+```
+
+Steps 4-7 show the same pipeline step by step.
 
 4. **Ingest the raw data** (saved as Parquet files in `data/bronze/`).
 
