@@ -76,8 +76,7 @@ The sources have different frequencies (daily, weekly, and monthly), so all of t
 - The models were not tuned after looking at the errors, to avoid evaluating redesigned features on the same test period.
 
 **Pipeline**
-
-- The pipeline is run manually; there is no scheduler.
+- The pipeline runs with a single command (`python run_pipeline.py`), but there is no scheduler, so it is started manually.
 - Loads are full refreshes (tables are overwritten), not incremental.
 - The data volume is small (about 51,000 raw rows), so performance at larger scale has not been tested.
 - The EPPO data is monthly in earlier years and weekly in recent years, so the monthly averages are built from different numbers of observations.
