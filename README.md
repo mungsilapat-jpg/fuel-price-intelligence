@@ -37,7 +37,7 @@ The sources have different frequencies (daily, weekly, and monthly), so all of t
 
 ## Pipeline layers
 
-- **Bronze:** Raw data is loaded into PostgreSQL as received, with a `loaded_at` timestamp added. Each load replaces the whole table (Brent 9,999 rows, USD/THB about 11,941 rows, EPPO 29,293 rows covering many countries).
+- **Bronze:** Raw data is loaded into PostgreSQL as received, with a `loaded_at` timestamp added. Each load replaces the whole table (Brent 9,999 rows, USD/THB about 11,950 rows, EPPO 29,293 rows covering many countries).
 - **Silver:** dbt keeps Thai rows only, removes null values, and averages every source to monthly (Brent 474 months, USD/THB 550 months, Thai fuel prices 525 rows: 3 fuel types x 175 months).
 - **Gold:** dbt joins the three monthly tables on `month` into `fct_fuel_price_monthly` (525 rows, 2012-01 to 2026-07). Brent is converted to THB per litre (USD per barrel x USD/THB / 158.987), and 1-3 month lagged features are added for forecasting.
 
@@ -51,6 +51,22 @@ The sources have different frequencies (daily, weekly, and monthly), so all of t
 
 ![dbt test results: all 14 tests pass](docs/images/dbt-test-pass.png)
 
+
+## Orchestration (Airflow)
+
+The same pipeline can also run as an Apache Airflow DAG (`fuel_price_pipeline`, in `airflow/dags/`). Each task calls the same scripts that `run_pipeline.py` uses, so Airflow only handles ordering, retries and scheduling:
+
+```mermaid
+flowchart LR
+  A[fetch_brent] --> D[load_bronze]
+  B[fetch_usdthb] --> D
+  C[fetch_thai_fuel] --> D
+  D --> E[dbt_run] --> F[dbt_test] --> G[train_models]
+```
+
+![Airflow DAG: all tasks succeeded](docs/images/airflow-dag-graph.png)
+
+The DAG is scheduled monthly, with one retry per task. This is a local setup to demonstrate orchestration: it uses Airflow 2.10.5 in `standalone` mode with a SQLite metadata database and the sequential executor, so tasks run one at a time. It is not a production deployment.
 
 ## Results
 
@@ -76,7 +92,7 @@ The sources have different frequencies (daily, weekly, and monthly), so all of t
 - The models were not tuned after looking at the errors, to avoid evaluating redesigned features on the same test period.
 
 **Pipeline**
-- The pipeline runs with a single command (`python run_pipeline.py`), but there is no scheduler, so it is started manually.
+- The pipeline runs with a single command (`python run_pipeline.py`). An optional Airflow DAG can schedule it monthly, but the Airflow setup is local only (SQLite metadata database, sequential executor).
 - Loads are full refreshes (tables are overwritten), not incremental.
 - The data volume is small (about 51,000 raw rows), so performance at larger scale has not been tested.
 - The EPPO data is monthly in earlier years and weekly in recent years, so the monthly averages are built from different numbers of observations.

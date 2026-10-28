@@ -12,7 +12,7 @@ url = URL.create(
     "postgresql+pg8000",
     username=os.getenv("POSTGRES_USER"),
     password=os.getenv("POSTGRES_PASSWORD"),
-    host="127.0.0.1",
+    host=os.getenv("POSTGRES_HOST", "127.0.0.1"),
     port=int(os.getenv("POSTGRES_PORT", "5434")),
     database=os.getenv("POSTGRES_DB"),
 )

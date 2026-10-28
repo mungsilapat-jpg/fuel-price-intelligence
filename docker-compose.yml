@@ -27,5 +27,37 @@ services:
       - postgres
     profiles: ["tools"]
 
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    command: standalone
+    # Workaround for Docker Desktop (Windows/WSL2): name lookups inside the Compose
+    # network were intermittently failing. 192.168.65.7 is Docker Desktop's internal
+    # DNS. Remove these two options on Linux or if lookups work without them.
+    dns:
+      - 192.168.65.7
+    dns_opt:
+      - single-request-reopen
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/db/airflow.db
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      EIA_API_KEY: ${EIA_API_KEY}
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - .:/opt/airflow/project
+      - airflowdata:/opt/airflow/db
+    depends_on:
+      - postgres
+    profiles: ["airflow"]
+
 volumes:
   pgdata:
+  airflowdata:

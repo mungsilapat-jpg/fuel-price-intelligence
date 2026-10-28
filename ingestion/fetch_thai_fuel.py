@@ -21,7 +21,7 @@ df["obs_date"] = pd.to_datetime(
 )
 df["price_baht"] = pd.to_numeric(df["price_baht"], errors="coerce")
 
-out = Path("data/bronze/eppo_fuel_prices.parquet")
+out = Path(__file__).resolve().parents[1] / "data" / "bronze" / "eppo_fuel_prices.parquet"
 out.parent.mkdir(parents=True, exist_ok=True)
 df.to_parquet(out, index=False)
 

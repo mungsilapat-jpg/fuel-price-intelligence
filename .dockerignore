@@ -1,0 +1,9 @@
+.git
+.venv
+.vscode
+.env
+__pycache__
+data
+docs
+dbt_project/target
+dbt_project/logs

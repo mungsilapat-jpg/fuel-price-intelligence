@@ -37,7 +37,7 @@ df = pd.DataFrame(rows)
 df["period"] = pd.to_datetime(df["period"])
 df["value"] = pd.to_numeric(df["value"])
 
-out = Path("data/bronze/eia_brent_daily.parquet")
+out = Path(__file__).resolve().parents[1] / "data" / "bronze" / "eia_brent_daily.parquet"
 out.parent.mkdir(parents=True, exist_ok=True)
 df.to_parquet(out, index=False)
 
